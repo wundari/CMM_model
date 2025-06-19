@@ -1,64 +1,94 @@
-#############
-Data contents
-#############
+## 📂 Dataset Contents
 
-The dataset contains pre-simulated data required for producing the plots in the paper:
-1. BEM_canonical: cross-correlation weights based on the binocular energy model (Supplementary Figure 4)
-2. checkpoint: pretrained GC-Net
-3. CMM: cross-correlation and cross-matching responses to RDSs (Figure 3)
-4. epoch_7_iter_22601: GC-Net outputs (Figure 4, 5)
-5. MVPA: decoding results (Figure 2, Supplementary Figure 1, 2)
-6. rds: generated RDS stimuli used for simulation (general usage)
-7. S2N: fMRI percent signal change (Supplementary Figure 3)
-8. VTC_extract_smoothed: processed VTC data from Brainvoyager (general usage)
-9. VTC_normalized: normalized VTC data (general usage)
-10. VTC_stimID: stimulus parameters for the VTC data (general usage)
-11. wavelet: wavelet analysis (Supplementary Figure 5)
+This dataset contains pre-simulated data required to generate the plots presented in the accompanying paper. The folder contents are as follows:
 
-############
-Python codes
-############
+1. **`BEM_canonical`** — Cross-correlation weights based on the Binocular Energy Model (see Supplementary Figure 4).
+2. **`checkpoint`** — Pretrained GC-Net model.
+3. **`CMM`** — Cross-correlation and cross-matching responses to RDSs (see Figure 3).
+4. **`epoch_7_iter_22601`** — GC-Net outputs (see Figures 4 & 5).
+5. **`MVPA`** — Decoding results (see Figure 2, Supplementary Figures 1 & 2).
+6. **`rds`** — Generated RDS stimuli used for simulation (general use).
+7. **`S2N`** — fMRI percent signal change (see Supplementary Figure 3).
+8. **`VTC_extract_smoothed`** — Smoothed VTC data exported from Brainvoyager (general use).
+9. **`VTC_normalized`** — Normalized VTC data (general use).
+10. **`VTC_stimID`** — Stimulus parameters corresponding to the VTC data (general use).
+11. **`wavelet`** — Wavelet analysis data (see Supplementary Figure 5).
 
-The corresponding python codes can be cloned from github;
-https://github.com/wundari/CMM
+---
 
-See folder_tree_structure.txt for the arrangement of the folders.
+## 🐍 Python Code Repository
 
-Essentially, inside the parent-folder (the folder that contains the cloned repository CMM) has 3 main folders:
-1. Codes
-2. Data
-3. Plots
+Refer to `folder_tree_structure.txt` for a complete layout of the folder hierarchy.
 
-Move the following dataset folders into the Data folder:
-1. BEM_canonical
-2. CMM
-3. MVPA
-4. rds
-5. S2N
-6. VTC_extract_smoothed
-7. VTC_normalized
-8. VTC_stimID
-9. wavelet
+The parent folder (which contains the cloned `CMM_model` repository) is organized into three main directories:
 
-create a directory shift_1.5_median_wrt_left:
+* `Codes/`
+* `Data/`
+* `Plots/`
+
+### Data Setup
+
+Please move the following dataset folders into the `Data/` directory:
+
+* `BEM_canonical`
+* `CMM`
+* `MVPA`
+* `rds`
+* `S2N`
+* `VTC_extract_smoothed`
+* `VTC_normalized`
+* `VTC_stimID`
+* `wavelet`
+
+### GC-Net Outputs
+
+Create the following directory:
+
+```
 Codes/Python/gcnet/results/sceneflow/monkaa/shift_1.5_median_wrt_left
+```
 
-Then, move the following dataset folders into shift_1.5_median_wrt_left directory:
-1. checkpoint
-2. epoch_7_iter_22601
+Then, move the following folders into that newly created directory:
 
-#######################################################################
-The following are the python files for reproducing figures in the paper
-#######################################################################
+* `checkpoint`
+* `epoch_7_iter_22601`
 
-Figure 2: Codes/Python/CMM/MVPA/run_MVPA_Decode_plot_paper.py
-Figure 3: Codes/Python/CMM/CMM_Standard/run_CMM_Standard_plot_paper.py
-Figure 4b right panel: Codes/Python/gcnet/RDS_analysis/run_rds_analysis_plot_paper.py
-Figure 4d, 4e, 5a: Codes/Python/gcnet/Network_dissection/run_AUC_Ratio_plot_paper.py
-Figure 5b: Codes/Python/gcnet/Visualization/run_feature_vis_plot_paper.py
+---
 
-Supplementary Figure 1; Codes/Python/CMM/MVPA/run_MVPA_Decode_fixed_vox_percentage_plot_paper.py
-Supplementary Figure 2: Codes/Python/CMM/MVPA/run_MVPA_Decode_plot_paper.py
-Supplementary Figure 3: Codes/Python/CMM/Signal2Noise/run_s2n_plot_paper.py
-Supplementary Figure 4: Codes/Python/CMM/BEM_canonical/run_BEM_canonical_plot_paper.py
-Supplementary Figure 5: Codes/Python/gcnet/wavelet/run_wavelet_analysis_plot_paper.py
+## 📊 Reproducing Figures
+
+Below is a mapping between paper figures and the corresponding Python scripts for reproduction:
+
+### Main Figures
+
+* **Figure 2**:
+  `CMM_model/Codes/Python/CMM/MVPA/run_MVPA_Decode_plot_paper.py`
+
+* **Figure 3**:
+  `CMM_model/Codes/Python/CMM/CMM_Standard/run_CMM_Standard_plot_paper.py`
+
+* **Figure 4b (right panel)**:
+  `CMM_model/Codes/Python/gcnet/RDS_analysis/run_rds_analysis_plot_paper.py`
+
+* **Figures 4d, 4e, 5a**:
+  `CMM_model/Codes/Python/gcnet/Network_dissection/run_AUC_Ratio_plot_paper.py`
+
+* **Figure 5b**:
+  `CMM_model/Codes/Python/gcnet/Visualization/run_feature_vis_plot_paper.py`
+
+### Supplementary Figures
+
+* **Supplementary Figure 1**:
+  `CMM_model/Codes/Python/CMM/MVPA/run_MVPA_Decode_fixed_vox_percentage_plot_paper.py`
+
+* **Supplementary Figure 2**:
+  `CMM_model/Codes/Python/CMM/MVPA/run_MVPA_Decode_plot_paper.py`
+
+* **Supplementary Figure 3**:
+  `CMM_model/Codes/Python/CMM/Signal2Noise/run_s2n_plot_paper.py`
+
+* **Supplementary Figure 4**:
+  `CMM_model/Codes/Python/CMM/BEM_canonical/run_BEM_canonical_plot_paper.py`
+
+* **Supplementary Figure 5**:
+  `CMM_model/Codes/Python/gcnet/wavelet/run_wavelet_analysis_plot_paper.py`
