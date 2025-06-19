@@ -1,4 +1,4 @@
-Parent_folder
+CMM_model
 └────── Codes
 	└── Python
 	│   ├── CMM
