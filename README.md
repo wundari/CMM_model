@@ -48,7 +48,7 @@ Please move the following dataset folders into the `CMM_model/Data/` directory:
 
 ## GC-Net Outputs
 
-Create the following directory to run the simulation using GC-Net:
+Create the following directory to store GC-Net outputs:
 
 ```
 CMM_model/Codes/Python/gcnet/results/sceneflow/monkaa/shift_1.5_median_wrt_left
