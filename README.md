@@ -1,6 +1,22 @@
+README
+
+## 🐍 Python Code Repository
+
+Refer to `folder_tree_structure.txt` for a complete layout of the folder hierarchy.
+
+The parent folder (`CMM_model`) is organized into three main directories:
+
+* `Codes/`
+* `Data/`
+* `Plots/`
+
+---
 ## 📂 Dataset Contents
 
-This dataset contains pre-simulated data required to generate the plots presented in the accompanying paper. The folder contents are as follows:
+The dataset contains pre-simulated data required to generate the plots presented in the accompanying paper. It is publicly available at 
+[Science Data Bank](https://doi.org/10.57760/sciencedb.26480)
+
+The folder contents are as follows:
 
 1. **`BEM_canonical`** — Cross-correlation weights based on the Binocular Energy Model (see Supplementary Figure 4).
 2. **`checkpoint`** — Pretrained GC-Net model.
@@ -14,21 +30,9 @@ This dataset contains pre-simulated data required to generate the plots presente
 10. **`VTC_stimID`** — Stimulus parameters corresponding to the VTC data (general use).
 11. **`wavelet`** — Wavelet analysis data (see Supplementary Figure 5).
 
----
-
-## 🐍 Python Code Repository
-
-Refer to `folder_tree_structure.txt` for a complete layout of the folder hierarchy.
-
-The parent folder (which contains the cloned `CMM_model` repository) is organized into three main directories:
-
-* `Codes/`
-* `Data/`
-* `Plots/`
-
 ### Data Setup
 
-Please move the following dataset folders into the `Data/` directory:
+Please move the following dataset folders into the `CMM_model/Data/` directory:
 
 * `BEM_canonical`
 * `CMM`
@@ -39,16 +43,17 @@ Please move the following dataset folders into the `Data/` directory:
 * `VTC_normalized`
 * `VTC_stimID`
 * `wavelet`
+---
 
 ### GC-Net Outputs
 
-Create the following directory:
+Create the following directory to run the simulation using GC-Net:
 
 ```
 CMM_model/Codes/Python/gcnet/results/sceneflow/monkaa/shift_1.5_median_wrt_left
 ```
 
-Then, move the following folders into that newly created directory:
+Then, move the following folders from the dataset into that newly created directory:
 
 * `checkpoint`
 * `epoch_7_iter_22601`
