@@ -1,4 +1,4 @@
-README
+# README
 
 ## 🐍 Python Code Repository
 
@@ -45,7 +45,7 @@ Please move the following dataset folders into the `CMM_model/Data/` directory:
 * `wavelet`
 ---
 
-### GC-Net Outputs
+## GC-Net Outputs
 
 Create the following directory to run the simulation using GC-Net:
 
