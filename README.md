@@ -45,7 +45,7 @@ Please move the following dataset folders into the `Data/` directory:
 Create the following directory:
 
 ```
-Codes/Python/gcnet/results/sceneflow/monkaa/shift_1.5_median_wrt_left
+CMM_model/Codes/Python/gcnet/results/sceneflow/monkaa/shift_1.5_median_wrt_left
 ```
 
 Then, move the following folders into that newly created directory:
