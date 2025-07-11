@@ -14,7 +14,12 @@ The parent folder (`CMM_model`) is organized into three main directories:
 ---
 ## 📂 Dataset Contents
 
-The dataset contains pre-simulated data required to generate the plots presented in the accompanying paper. It is publicly available at 
+The dataset contains pre-simulated data required to generate the plots presented in the accompanying paper:
+
+Human and artificial visual systems share a computational principle for transforming binocular disparity into depth representation
+https://www.nature.com/articles/s42003-025-08474-1
+
+The dataset is publicly available at 
 [Science Data Bank](https://doi.org/10.57760/sciencedb.26480)
 
 The folder contents are as follows:
